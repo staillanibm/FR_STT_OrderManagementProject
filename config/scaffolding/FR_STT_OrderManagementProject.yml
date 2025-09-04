@@ -96,10 +96,6 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2064
-- serviceName: pub.flow:getLastFailureCaught
-  packages:
-  - name: WmPublic
-    version: 11.1.0.0.2064
 configurationVariables:
   ? artConnection.FR_STT_OrderManagementProject.project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.order_db.connectionSettings.dbType
   : MSSQL
