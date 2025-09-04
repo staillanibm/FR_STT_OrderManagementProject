@@ -92,14 +92,6 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2064
-- serviceName: project.fr_stt_ordermanagement.integrations:testNextVal
-  packages:
-  - name: FR_STT_OrderManagementProject
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
 configurationVariables:
   ? artConnection.FR_STT_OrderManagementProject.project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.order_db.connectionSettings.dbType
   : MSSQL
