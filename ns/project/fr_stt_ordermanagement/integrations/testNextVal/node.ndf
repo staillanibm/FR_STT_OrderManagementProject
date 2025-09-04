@@ -45,9 +45,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="createdBy">Stephane.Tailland@ibm.com</value>
-    <value name="createdDate">1756971337177</value>
-    <value name="lastModifiedDate">1756971337177</value>
+    <value name="lastModifiedBy">Stephane.Tailland@ibm.com</value>
+    <value name="lastModifiedDate">1756971393214</value>
     <value name="displayName">testNextVal</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -64,9 +63,9 @@
         <value name="providerName">WmJDBCAdapter</value>
         <record name="operation" javaclass="com.wm.util.Values">
           <value name="operationName">nextValOrderId</value>
-          <null name="description"/>
           <value name="isCustom">true</value>
           <value name="operationType">actions</value>
+          <value name="connectionType">sagcloud</value>
           <value name="projectName">project.fr_stt_ordermanagement</value>
         </record>
         <value name="appType">predefined</value>
@@ -98,11 +97,11 @@
         </array>
         <record name="connection" javaclass="com.wm.util.Values">
           <value name="connectionName">order_db</value>
-          <value name="connectionType">IBM webMethods Adapter for JDBC ExtendedConnection</value>
+          <value name="connectionType">sagcloud</value>
           <null name="description"/>
         </record>
         <value name="connectionNSName">project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:order_db</value>
-        <value name="connectionType">IBM webMethods Adapter for JDBC ExtendedConnection</value>
+        <value name="connectionType">sagcloud</value>
         <Boolean name="accountReferenceResolved">true</Boolean>
       </record>
     </record>
