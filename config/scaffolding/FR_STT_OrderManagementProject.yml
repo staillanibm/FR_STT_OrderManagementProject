@@ -76,11 +76,15 @@ services:
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
-- serviceName: pub.list:sizeOfList
+- serviceName: pub.json:documentToJSONString
   packages:
   - name: WmPublic
     version: 11.1.0.0.2064
 - serviceName: pub.flow:debugLog
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
+- serviceName: pub.list:sizeOfList
   packages:
   - name: WmPublic
     version: 11.1.0.0.2064
