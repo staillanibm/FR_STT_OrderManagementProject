@@ -7,3 +7,8 @@ packages:
   gitUrl: https://github.com/staillanibm
   gitUsername: staillanibm
   gitBranch: main
+services:
+- serviceName: project.fr_stt_ordermanagement.integrations:processOrderBatch
+  packages:
+  - name: FR_STT_OrderManagementProject
+    version: "1.0"
