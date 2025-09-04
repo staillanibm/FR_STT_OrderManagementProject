@@ -60,6 +60,10 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2064
+- serviceName: pub.flow:getLastFailureCaught
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
 - serviceName: project.fr_stt_ordermanagement.integrations:testNextVal
   packages:
   - name: FR_STT_OrderManagementProject
