@@ -12,7 +12,7 @@ services:
   packages:
   - name: FR_STT_OrderManagementProject
     version: "1.0"
-- serviceName: pub.json:documentToJSONString
+- serviceName: pub.list:sizeOfList
   packages:
   - name: WmPublic
     version: 11.1.0.0.2064
