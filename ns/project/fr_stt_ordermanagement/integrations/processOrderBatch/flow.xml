@@ -3001,7 +3001,7 @@
 </MAP>
 </INVOKE>
 
-<LOOP IN-ARRAY="/orderBatch/tns:OrderBatch/tns:Order/tns:OrderLine">
+<LOOP IN-ARRAY="/orderBatch/tns:OrderBatch/tns:Orders/tns:Order/tns:OrderLines/tns:OrderLine">
   <COMMENT></COMMENT>
 
   <!-- nodes -->
@@ -3548,25 +3548,25 @@
 <MAPCOPY FROM="/orderId;1;0" TO="/insertOrderLineInput;2;0/order_id;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:LineNumber;1;0" TO="/insertOrderLineInput;2;0/line_number;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Orders;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrdersType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_Order/tns:OrderLines;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLinesType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:LineNumber;1;0" TO="/insertOrderLineInput;2;0/line_number;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:ProductCode;1;0" TO="/insertOrderLineInput;2;0/product_code;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Orders;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrdersType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_Order/tns:OrderLines;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLinesType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:ProductCode;1;0" TO="/insertOrderLineInput;2;0/product_code;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:ProductName;1;0" TO="/insertOrderLineInput;2;0/product_name;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Orders;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrdersType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_Order/tns:OrderLines;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLinesType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:ProductName;1;0" TO="/insertOrderLineInput;2;0/product_name;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:Quantity;1;0" TO="/insertOrderLineInput;2;0/quantity;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Orders;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrdersType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_Order/tns:OrderLines;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLinesType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:Quantity;1;0" TO="/insertOrderLineInput;2;0/quantity;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:UnitPrice;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/@currency;1;0" TO="/insertOrderLineInput;2;0/currency;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Orders;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrdersType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_Order/tns:OrderLines;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLinesType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:UnitPrice;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/*body;1;0" TO="/insertOrderLineInput;2;0/unit_price;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:UnitPrice;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/*body;1;0" TO="/insertOrderLineInput;2;0/unit_price;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Orders;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrdersType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_Order/tns:OrderLines;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLinesType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:UnitPrice;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/@currency;1;0" TO="/insertOrderLineInput;2;0/currency;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:LineTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/*body;1;0" TO="/insertOrderLineInput;2;0/line_total;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Orders;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrdersType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_Order/tns:OrderLines;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLinesType/tns:OrderLine;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:LineTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/*body;1;0" TO="/insertOrderLineInput;2;0/line_total;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -3684,6 +3684,105 @@
         <value name="form_qualified">false</value>
         <value name="is_global">false</value>
         <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">order_line_id</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">order_id</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">line_number</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">product_code</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">product_name</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">quantity</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">unit_price</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">currency</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">unknown</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">line_total</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
         </array>
         <value name="modifiable">true</value>
       </record>
@@ -3768,6 +3867,9 @@
   <!-- nodes -->
 
 <MAPDELETE FIELD="/insertOrderLineOutput;2;0">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/insertOrderLineInput;2;0">
 </MAPDELETE>
 </MAP>
 </INVOKE>
@@ -3869,20 +3971,6 @@
     <value name="form_qualified">false</value>
     <value name="is_global">false</value>
     <array name="rec_fields" type="record" depth="1">
-      <record javaclass="com.wm.util.Values">
-        <value name="node_type">record</value>
-        <value name="node_subtype">unknown</value>
-        <value name="is_public">false</value>
-        <value name="field_name">insertOrderLineInput</value>
-        <value name="field_type">record</value>
-        <value name="field_dim">0</value>
-        <value name="nillable">true</value>
-        <value name="form_qualified">false</value>
-        <value name="is_global">false</value>
-        <array name="rec_fields" type="record" depth="1">
-        </array>
-        <value name="modifiable">true</value>
-      </record>
       <record javaclass="com.wm.util.Values">
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
