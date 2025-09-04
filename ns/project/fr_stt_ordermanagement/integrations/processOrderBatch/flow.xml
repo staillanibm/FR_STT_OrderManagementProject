@@ -1140,30 +1140,6 @@
             <value name="is_global">false</value>
           </record>
           <record javaclass="com.wm.util.Values">
-            <value name="node_type">field</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">processing_status</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="field_opt">true</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
-            <value name="node_type">field</value>
-            <value name="node_subtype">unknown</value>
-            <value name="is_public">false</value>
-            <value name="field_name">error_message</value>
-            <value name="field_type">string</value>
-            <value name="field_dim">0</value>
-            <value name="field_opt">true</value>
-            <value name="nillable">true</value>
-            <value name="form_qualified">false</value>
-            <value name="is_global">false</value>
-          </record>
-          <record javaclass="com.wm.util.Values">
             <value name="node_type">record</value>
             <value name="node_subtype">unknown</value>
             <value name="is_public">false</value>
@@ -1448,16 +1424,16 @@
 <MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:DeliveryAddress;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_AddressType/tns:Country;1;0" TO="/insertOrderInput;2;0/delivery_country;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/@currency;1;0" TO="/insertOrderInput;2;0/currency;1;0">
-</MAPCOPY>
-
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/*body;1;0" TO="/insertOrderInput;2;0/order_total;1;0">
-</MAPCOPY>
-
 <MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:Priority;1;0" TO="/insertOrderInput;2;0/priority;1;0">
 </MAPCOPY>
 
 <MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:Notes;1;0" TO="/insertOrderInput;2;0/notes;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;1;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:LineTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/@currency;1;0" TO="/insertOrderInput;2;0/currency;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderLine;4;1;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderLineType/tns:LineTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/*body;1;0" TO="/insertOrderInput;2;0/order_total;1;0">
 </MAPCOPY>
 </MAP>
 
