@@ -99,7 +99,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Stephane.Tailland@ibm.com</value>
-    <value name="lastModifiedDate">1757011217293</value>
+    <value name="lastModifiedDate">1757011685166</value>
     <value name="displayName">processOrderBatch</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
