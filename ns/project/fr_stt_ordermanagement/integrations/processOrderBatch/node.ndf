@@ -99,7 +99,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Stephane.Tailland@ibm.com</value>
-    <value name="lastModifiedDate">1756972363061</value>
+    <value name="lastModifiedDate">1756974130135</value>
     <value name="displayName">processOrderBatch</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -247,7 +247,7 @@
         <value name="name">Database</value>
         <value name="providerName">WmJDBCAdapter</value>
         <record name="operation" javaclass="com.wm.util.Values">
-          <value name="operationName">nextValOrderId</value>
+          <value name="operationName">nextValOrderBatch</value>
           <value name="isCustom">true</value>
           <value name="operationType">actions</value>
           <value name="connectionType">sagcloud</value>
@@ -288,11 +288,9 @@
         </array>
         <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
         </array>
-        <number name="ui_step_index" type="Long">10</number>
         <value name="nodePathNew">1.0.0</value>
         <number name="nodeIndex" type="Long">0</number>
         <number name="lineNumberForDebug" type="Long">10</number>
-        <value name="nodePathForDebug">1.0.0</value>
       </record>
       <record name="/1/0/1" javaclass="com.wm.util.Values">
         <value name="itemType">APPS</value>
@@ -346,12 +344,133 @@
         <number name="lineNumberForDebug" type="Long">11</number>
         <null name="outputMapSet"/>
       </record>
+      <record name="/1/0/2" javaclass="com.wm.util.Values">
+        <value name="name">REPEAT</value>
+        <value name="itemType">CONTROLS</value>
+        <record name="in_array" javaclass="com.wm.util.Values">
+          <value name="name">/orderBatch/tns:OrderBatch/tns:Order</value>
+          <value name="type">recref</value>
+          <value name="dim">1</value>
+          <value name="rec_ref">project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType</value>
+          <Boolean name="isLink">true</Boolean>
+          <value name="field_name">tns:Order</value>
+          <value name="flow_path">/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;1;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType</value>
+        </record>
+        <value name="nodePathNew">1.0.2</value>
+        <number name="nodeIndex" type="Long">2</number>
+        <number name="lineNumberForDebug" type="Long">12</number>
+      </record>
+      <record name="/1/0/2/0" javaclass="com.wm.util.Values">
+        <value name="itemType">APPS</value>
+        <value name="id">com.wm.adapter.wmjdbc.JDBCAdapter</value>
+        <value name="name">Database</value>
+        <value name="providerName">WmJDBCAdapter</value>
+        <record name="operation" javaclass="com.wm.util.Values">
+          <value name="operationName">nextValOrderId</value>
+          <value name="isCustom">true</value>
+          <value name="operationType">actions</value>
+          <value name="connectionType">sagcloud</value>
+          <value name="projectName">project.fr_stt_ordermanagement</value>
+        </record>
+        <value name="appType">predefined</value>
+        <Boolean name="hasAccount">true</Boolean>
+        <Boolean name="allowCustomOperations">true</Boolean>
+        <value name="allowDeleteApplication">false</value>
+        <value name="allowUpdateApplication">false</value>
+        <null name="certified"/>
+        <Boolean name="deprecated">false</Boolean>
+        <value name="description">Database Application enables you to perform database operation</value>
+        <null name="icon"/>
+        <value name="packageName">WmJDBCAdapter</value>
+        <value name="type">Adapters</value>
+        <value name="version">1.0</value>
+        <record name="connection" javaclass="com.wm.util.Values">
+          <value name="connectionName">order_db</value>
+          <value name="connectionType">sagcloud</value>
+          <null name="description"/>
+        </record>
+        <value name="connectionNSName">project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:order_db</value>
+        <value name="connectionType">sagcloud</value>
+        <Boolean name="accountReferenceResolved">true</Boolean>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <array name="map" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapDelete" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="transformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="inputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <number name="ui_step_index" type="Long">12</number>
+        <value name="nodePathNew">1.0.2.0</value>
+        <number name="nodeIndex" type="Long">0</number>
+        <number name="lineNumberForDebug" type="Long">13</number>
+        <value name="nodePathForDebug">1.0.0</value>
+      </record>
+      <record name="/1/0/2/1" javaclass="com.wm.util.Values">
+        <value name="itemType">APPS</value>
+        <value name="id">com.wm.adapter.wmjdbc.JDBCAdapter</value>
+        <value name="name">Database</value>
+        <value name="providerName">WmJDBCAdapter</value>
+        <record name="operation" javaclass="com.wm.util.Values">
+          <value name="operationName">insertOrder</value>
+          <value name="isCustom">true</value>
+          <value name="operationType">actions</value>
+          <value name="connectionType">sagcloud</value>
+          <value name="projectName">project.fr_stt_ordermanagement</value>
+        </record>
+        <value name="appType">predefined</value>
+        <Boolean name="hasAccount">true</Boolean>
+        <Boolean name="allowCustomOperations">true</Boolean>
+        <value name="allowDeleteApplication">false</value>
+        <value name="allowUpdateApplication">false</value>
+        <null name="certified"/>
+        <Boolean name="deprecated">false</Boolean>
+        <value name="description">Database Application enables you to perform database operation</value>
+        <null name="icon"/>
+        <value name="packageName">WmJDBCAdapter</value>
+        <value name="type">Adapters</value>
+        <value name="version">1.0</value>
+        <record name="connection" javaclass="com.wm.util.Values">
+          <value name="connectionName">order_db</value>
+          <value name="connectionType">sagcloud</value>
+          <null name="description"/>
+        </record>
+        <value name="connectionNSName">project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:order_db</value>
+        <value name="connectionType">sagcloud</value>
+        <Boolean name="accountReferenceResolved">true</Boolean>
+        <Boolean name="serviceReferenceResolved">true</Boolean>
+        <array name="map" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="mapDelete" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="transformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <null name="mapSet"/>
+        <array name="inputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
+        <number name="ui_step_index" type="Long">14</number>
+        <value name="nodePathNew">1.0.2.1</value>
+        <number name="nodeIndex" type="Long">1</number>
+        <number name="lineNumberForDebug" type="Long">14</number>
+        <null name="outputMapSet"/>
+      </record>
       <record name="/2" javaclass="com.wm.util.Values">
         <value name="name">CATCH</value>
         <value name="itemType">CONTROLS</value>
         <value name="nodePathNew">2</value>
         <number name="nodeIndex" type="Long">2</number>
-        <number name="lineNumberForDebug" type="Long">12</number>
+        <number name="lineNumberForDebug" type="Long">14</number>
         <value name="nodePathForDebug">2</value>
       </record>
       <record name="/2/0" javaclass="com.wm.util.Values">
@@ -370,7 +489,7 @@
         <number name="ui_step_index" type="Long">13</number>
         <value name="nodePathNew">2.0</value>
         <number name="nodeIndex" type="Long">0</number>
-        <number name="lineNumberForDebug" type="Long">13</number>
+        <number name="lineNumberForDebug" type="Long">15</number>
       </record>
       <record name="/2/1" javaclass="com.wm.util.Values">
         <null name="name"/>
@@ -388,7 +507,7 @@
         <number name="ui_step_index" type="Long">14</number>
         <value name="nodePathNew">2.1</value>
         <number name="nodeIndex" type="Long">1</number>
-        <number name="lineNumberForDebug" type="Long">14</number>
+        <number name="lineNumberForDebug" type="Long">16</number>
         <null name="mapSet"/>
         <null name="outputMapSet"/>
       </record>
@@ -397,7 +516,7 @@
         <value name="name">EXIT</value>
         <value name="nodePathNew">2.2</value>
         <number name="nodeIndex" type="Long">2</number>
-        <number name="lineNumberForDebug" type="Long">15</number>
+        <number name="lineNumberForDebug" type="Long">17</number>
       </record>
     </record>
   </record>

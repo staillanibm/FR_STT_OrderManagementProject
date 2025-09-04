@@ -653,7 +653,7 @@
 
   <!-- nodes -->
 
-<INVOKE NAME="Invoke predefined:com.wm.adapter.wmjdbc.JDBCAdapter" TIMEOUT="" SERVICE="project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:nextValOrderId" VALIDATE-IN="" VALIDATE-OUT="">
+<INVOKE NAME="Invoke predefined:com.wm.adapter.wmjdbc.JDBCAdapter" TIMEOUT="" SERVICE="project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:nextValOrderBatch" VALIDATE-IN="" VALIDATE-OUT="">
   <COMMENT></COMMENT>
 </INVOKE>
 
@@ -852,6 +852,503 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">nextValOrderBatchOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">SQLStatement</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">results</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">1</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="is_soap_array_encoding_used">true</value>
+            <array name="rec_fields" type="record" depth="1">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">field</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">batchId</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:BatchId;1;0" TO="/insertOrderBatchInput;2;0/batch_code;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:BatchDate;1;0" TO="/insertOrderBatchInput;2;0/batch_date;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:TotalOrders;1;0" TO="/insertOrderBatchInput;2;0/total_orders;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Description;1;0" TO="/insertOrderBatchInput;2;0/description;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/nextValOrderBatchOutput;2;0/results;2;1/batchId;1;0" TO="/insertOrderBatchInput;2;0/batch_id;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <COMMENT></COMMENT>
+</MAP>
+</INVOKE>
+
+<LOOP IN-ARRAY="/orderBatch/tns:OrderBatch/tns:Order">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE NAME="Invoke predefined:com.wm.adapter.wmjdbc.JDBCAdapter" TIMEOUT="" SERVICE="project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:nextValOrderId" VALIDATE-IN="" VALIDATE-OUT="">
+  <COMMENT></COMMENT>
+</INVOKE>
+
+<INVOKE NAME="Invoke predefined:com.wm.adapter.wmjdbc.JDBCAdapter" TIMEOUT="" SERVICE="project.fr_stt_ordermanagement.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:insertOrder" VALIDATE-IN="" VALIDATE-OUT="">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">insertOrderInput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">order_id</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">batch_id</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">order_code</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">order_date</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">customer_name</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">customer_email</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">delivery_street</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">delivery_city</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">delivery_postal_code</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">delivery_country</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">order_total</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">currency</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">priority</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">notes</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">processing_status</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">error_message</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">overrideCredentials</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <array name="rec_fields" type="record" depth="1">
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">$connectionName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">insertOrderBatchInput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+          <value name="field_usereditable">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">orderBatch</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">project.fr_stt_ordermanagement.documenttypes:OrderBatch</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">size</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">status</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">statusReason</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">nextValOrderBatchOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">field</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">SQLStatement</value>
+            <value name="field_type">string</value>
+            <value name="field_dim">0</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+          </record>
+          <record javaclass="com.wm.util.Values">
+            <value name="node_type">record</value>
+            <value name="node_subtype">unknown</value>
+            <value name="is_public">false</value>
+            <value name="field_name">results</value>
+            <value name="field_type">record</value>
+            <value name="field_dim">1</value>
+            <value name="field_opt">true</value>
+            <value name="nillable">true</value>
+            <value name="form_qualified">false</value>
+            <value name="is_global">false</value>
+            <value name="is_soap_array_encoding_used">true</value>
+            <array name="rec_fields" type="record" depth="1">
+              <record javaclass="com.wm.util.Values">
+                <value name="node_type">field</value>
+                <value name="node_subtype">unknown</value>
+                <value name="is_public">false</value>
+                <value name="field_name">batchId</value>
+                <value name="field_type">string</value>
+                <value name="field_dim">0</value>
+                <value name="field_opt">true</value>
+                <value name="nillable">true</value>
+                <value name="form_qualified">false</value>
+                <value name="is_global">false</value>
+              </record>
+            </array>
+            <value name="modifiable">true</value>
+          </record>
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">insertOrderBatchOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">nextValOrderIdOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -896,23 +1393,22 @@
                 <value name="form_qualified">false</value>
                 <value name="is_global">false</value>
               </record>
-              <record javaclass="com.wm.util.Values">
-                <value name="node_type">unknown</value>
-                <value name="node_subtype">unknown</value>
-                <value name="is_public">false</value>
-                <value name="field_name">orderId</value>
-                <value name="field_type">object</value>
-                <value name="field_dim">0</value>
-                <value name="wrapper_type">java.lang.Integer</value>
-                <value name="nillable">true</value>
-                <value name="form_qualified">false</value>
-                <value name="is_global">false</value>
-              </record>
             </array>
             <value name="modifiable">true</value>
           </record>
         </array>
         <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">$iteration</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
       </record>
     </array>
     <value name="modifiable">true</value>
@@ -922,19 +1418,46 @@
 
   <!-- nodes -->
 
-<MAPCOPY FROM="/nextValOrderIdOutput;2;0/results;2;1/orderId;3.6;0" TO="/insertOrderBatchInput;2;0/batch_id;1;0">
+<MAPCOPY FROM="/nextValOrderBatchOutput;2;0/results;2;1/batchId;1;0" TO="/insertOrderInput;2;0/batch_id;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:BatchId;1;0" TO="/insertOrderBatchInput;2;0/batch_code;1;0">
+<MAPCOPY FROM="/nextValOrderIdOutput;2;0/results;2;1/orderId;1;0" TO="/insertOrderInput;2;0/order_id;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:BatchDate;1;0" TO="/insertOrderBatchInput;2;0/batch_date;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderId;1;0" TO="/insertOrderInput;2;0/order_code;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:TotalOrders;1;0" TO="/insertOrderBatchInput;2;0/total_orders;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderDate;1;0" TO="/insertOrderInput;2;0/order_date;1;0">
 </MAPCOPY>
 
-<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Description;1;0" TO="/insertOrderBatchInput;2;0/description;1;0">
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:CustomerName;1;0" TO="/insertOrderInput;2;0/customer_name;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:CustomerEmail;1;0" TO="/insertOrderInput;2;0/customer_email;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:DeliveryAddress;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_AddressType/tns:Street;1;0" TO="/insertOrderInput;2;0/delivery_street;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:DeliveryAddress;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_AddressType/tns:City;1;0" TO="/insertOrderInput;2;0/delivery_city;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:DeliveryAddress;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_AddressType/tns:PostalCode;1;0" TO="/insertOrderInput;2;0/delivery_postal_code;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:DeliveryAddress;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_AddressType/tns:Country;1;0" TO="/insertOrderInput;2;0/delivery_country;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/@currency;1;0" TO="/insertOrderInput;2;0/currency;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:OrderTotal;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_MoneyType/*body;1;0" TO="/insertOrderInput;2;0/order_total;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:Priority;1;0" TO="/insertOrderInput;2;0/priority;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/orderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:OrderBatch/tns:OrderBatch;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderBatchType/tns:Order;4;0;project.fr_stt_ordermanagement.documenttypes:docTypeRef_tns_OrderType/tns:Notes;1;0" TO="/insertOrderInput;2;0/notes;1;0">
 </MAPCOPY>
 </MAP>
 
@@ -942,6 +1465,7 @@
   <COMMENT></COMMENT>
 </MAP>
 </INVOKE>
+</LOOP>
 </SEQUENCE>
 </SEQUENCE>
 
@@ -1042,6 +1566,20 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
+        <value name="field_name">insertOrderInput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
         <value name="field_name">insertOrderBatchInput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
@@ -1108,7 +1646,7 @@
         <value name="node_type">record</value>
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
-        <value name="field_name">nextValOrderIdOutput</value>
+        <value name="field_name">nextValOrderBatchOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
@@ -1123,6 +1661,34 @@
         <value name="node_subtype">unknown</value>
         <value name="is_public">false</value>
         <value name="field_name">insertOrderBatchOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">nextValOrderIdOutput</value>
+        <value name="field_type">record</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <array name="rec_fields" type="record" depth="1">
+        </array>
+        <value name="modifiable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">insertOrderOutput</value>
         <value name="field_type">record</value>
         <value name="field_dim">0</value>
         <value name="nillable">true</value>
