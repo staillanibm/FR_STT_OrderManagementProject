@@ -99,7 +99,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Stephane.Tailland@ibm.com</value>
-    <value name="lastModifiedDate">1756975100957</value>
+    <value name="lastModifiedDate">1756975523795</value>
     <value name="displayName">processOrderBatch</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -435,6 +435,26 @@
         <null name="outputMapSet"/>
       </record>
       <record name="/1/0/2/1" javaclass="com.wm.util.Values">
+        <null name="name"/>
+        <value name="itemType">SERVICES</value>
+        <record name="serviceInfo" javaclass="com.wm.util.Values">
+          <value name="groupDisplayName">Flow</value>
+          <value name="groupName">flow</value>
+          <null name="services"/>
+        </record>
+        <record name="serviceName" javaclass="com.wm.util.Values">
+          <value name="displayName">debugLog</value>
+          <value name="serviceName">pub.flow:debugLog</value>
+          <value name="transformerSupport">false</value>
+        </record>
+        <number name="ui_step_index" type="Long">15</number>
+        <value name="nodePathNew">1.0.2.1</value>
+        <number name="nodeIndex" type="Long">1</number>
+        <number name="lineNumberForDebug" type="Long">15</number>
+        <null name="mapSet"/>
+        <null name="outputMapSet"/>
+      </record>
+      <record name="/1/0/2/2" javaclass="com.wm.util.Values">
         <value name="itemType">APPS</value>
         <value name="id">com.wm.adapter.wmjdbc.JDBCAdapter</value>
         <value name="name">Database</value>
@@ -486,7 +506,7 @@
         <number name="lineNumberForDebug" type="Long">15</number>
         <null name="outputMapSet"/>
       </record>
-      <record name="/1/0/2/2" javaclass="com.wm.util.Values">
+      <record name="/1/0/2/3" javaclass="com.wm.util.Values">
         <value name="name">REPEAT</value>
         <value name="itemType">CONTROLS</value>
         <record name="in_array" javaclass="com.wm.util.Values">
@@ -502,7 +522,7 @@
         <number name="nodeIndex" type="Long">2</number>
         <number name="lineNumberForDebug" type="Long">16</number>
       </record>
-      <record name="/1/0/2/2/0" javaclass="com.wm.util.Values">
+      <record name="/1/0/2/3/0" javaclass="com.wm.util.Values">
         <value name="itemType">APPS</value>
         <value name="id">com.wm.adapter.wmjdbc.JDBCAdapter</value>
         <value name="name">Database</value>
@@ -554,7 +574,7 @@
         <number name="lineNumberForDebug" type="Long">17</number>
         <null name="outputMapSet"/>
       </record>
-      <record name="/1/0/2/2/1" javaclass="com.wm.util.Values">
+      <record name="/1/0/2/3/1" javaclass="com.wm.util.Values">
         <value name="itemType">APPS</value>
         <value name="id">com.wm.adapter.wmjdbc.JDBCAdapter</value>
         <value name="name">Database</value>
