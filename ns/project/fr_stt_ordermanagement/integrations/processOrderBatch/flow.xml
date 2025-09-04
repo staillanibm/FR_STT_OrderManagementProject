@@ -1817,7 +1817,7 @@
 </MAP>
 </INVOKE>
 
-<EXIT FROM="$flow" SIGNAL="FAILURE" FAILURE-MESSAGE="Invalid file content">
+<EXIT FROM="$flow" SIGNAL="FAILURE" FAILURE-MESSAGE="Invalid order count">
   <COMMENT></COMMENT>
 </EXIT>
 </SEQUENCE>
