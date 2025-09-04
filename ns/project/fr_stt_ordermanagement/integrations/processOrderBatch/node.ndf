@@ -99,7 +99,7 @@
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
     <value name="lastModifiedBy">Stephane.Tailland@ibm.com</value>
-    <value name="lastModifiedDate">1756969979049</value>
+    <value name="lastModifiedDate">1756971302452</value>
     <value name="displayName">processOrderBatch</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -228,13 +228,16 @@
       <record name="/1" javaclass="com.wm.util.Values">
         <value name="name">TRY</value>
         <value name="itemType">CONTROLS</value>
+        <value name="nodePathNew">1</value>
+        <number name="nodeIndex" type="Long">1</number>
+        <number name="lineNumberForDebug" type="Long">8</number>
       </record>
       <record name="/1/0" javaclass="com.wm.util.Values">
         <value name="name">BLOCK</value>
         <value name="itemType">CONTROLS</value>
-        <value name="nodePathNew">1</value>
-        <number name="nodeIndex" type="Long">1</number>
-        <number name="lineNumberForDebug" type="Long">8</number>
+        <value name="nodePathNew">1.0</value>
+        <number name="nodeIndex" type="Long">0</number>
+        <number name="lineNumberForDebug" type="Long">9</number>
       </record>
       <record name="/1/0/0" javaclass="com.wm.util.Values">
         <value name="itemType">APPS</value>
@@ -242,7 +245,7 @@
         <value name="name">Database</value>
         <value name="providerName">WmJDBCAdapter</value>
         <record name="operation" javaclass="com.wm.util.Values">
-          <value name="operationName">insertOrderBatch</value>
+          <value name="operationName">nextValOrderId</value>
           <value name="isCustom">true</value>
           <value name="operationType">actions</value>
           <value name="connectionType">sagcloud</value>
@@ -277,20 +280,23 @@
         </array>
         <array name="lookupTransformer" type="object" depth="1" javaclass="java.lang.Object">
         </array>
-        <null name="mapSet"/>
+        <array name="mapSet" type="object" depth="1" javaclass="java.lang.Object">
+        </array>
         <array name="inputMap" type="object" depth="1" javaclass="java.lang.Object">
         </array>
         <array name="outputMap" type="object" depth="1" javaclass="java.lang.Object">
         </array>
-        <number name="ui_step_index" type="Long">9</number>
-        <value name="nodePathNew">1.0</value>
+        <number name="ui_step_index" type="Long">10</number>
+        <value name="nodePathNew">1.0.0</value>
         <number name="nodeIndex" type="Long">0</number>
-        <number name="lineNumberForDebug" type="Long">9</number>
-        <null name="outputMapSet"/>
+        <number name="lineNumberForDebug" type="Long">10</number>
       </record>
       <record name="/2" javaclass="com.wm.util.Values">
         <value name="name">CATCH</value>
         <value name="itemType">CONTROLS</value>
+        <value name="nodePathNew">2</value>
+        <number name="nodeIndex" type="Long">2</number>
+        <number name="lineNumberForDebug" type="Long">12</number>
       </record>
       <null name="/2/0"/>
     </record>
